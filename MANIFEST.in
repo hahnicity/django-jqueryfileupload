@@ -1,0 +1,5 @@
+include README.md
+include tests_urls.py
+include tests_settings.py
+include run_tests.py
+recursive-exclude * *.py[co]
