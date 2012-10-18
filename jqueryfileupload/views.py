@@ -16,7 +16,8 @@ def response_mimetype(request):
         return "text/plain"
 
 def get_delete_url(object):
-    return reverse('jmultiuploader_delete', kwargs={'pk': object.pk})
+    return reverse('jqueryfileupload_delete', kwargs={'pk': object.pk})
+
 
 class DeleteFileView(DeleteView):
     model = UploadedFile
