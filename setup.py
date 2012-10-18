@@ -18,7 +18,7 @@ setup(
         'jqueryfileupload',
     ],
     classifiers=[
-        'Development Status :: 1 - Beta',
+        'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
