@@ -10,4 +10,4 @@ ROOT_URLCONF = 'tests_urls'
 TEMPLATE_DIRS = (
     os.path.dirname(__file__),
 )
-STATIC_ROOT = mkdtemp()
+MEDIA_ROOT = mkdtemp()
