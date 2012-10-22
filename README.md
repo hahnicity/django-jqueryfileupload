@@ -3,6 +3,9 @@ django-jqueryfileupload
 
 Django app for handle multiple file uploads via jquery-file-upload plugin.
 
+[![Build Status](https://travis-ci.org/witoi/django-jqueryfileupload.png?branch=master,develop)](https://travis-ci.org/witoi/django-jqueryfileupload)
+
+
 ## Requirements
 
 * Django>=1.3
