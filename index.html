@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>django-jqueryfileupload by witoi</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>django-jqueryfileupload</h1>
+        <p>Django app for handle multiple file uploads via jquery-file-upload plugin.</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/witoi/django-jqueryfileupload" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/witoi/django-jqueryfileupload/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/witoi/django-jqueryfileupload/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h2>Installation</h2>
+
+<div class="highlight"><pre>pip install django-jqueryfileupload
+</pre></div>
+
+<h2>Configuration</h2>
+
+<p>Optional</p>
+
+<div class="highlight"><pre><span class="c"># settings.py</span>
+<span class="n">INSTALLED_APPS</span> <span class="o">+=</span> <span class="p">(</span><span class="s">'jqueryfileupload'</span><span class="p">,)</span>
+</pre></div>
+
+<p>Add <a href="http://blueimp.github.com/jQuery-File-Upload/">Blueimp Jquery File Upload plugin</a> to static path.</p>
+
+<h2>Usage</h2>
+
+<div class="highlight"><pre><span class="c"># urls.py</span>
+<span class="kn">from</span> <span class="nn">jqueryfileupload.views</span> <span class="kn">import</span> <span class="n">UploadFileView</span><span class="p">,</span> <span class="n">DeleteFileView</span>
+<span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">MyModel</span>
+
+<span class="n">urlpatterns</span> <span class="o">+=</span> <span class="p">(</span><span class="s">r'^imageuploader/upload/$'</span><span class="p">,</span>
+                <span class="n">UploadFileView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">MyModel</span><span class="p">,</span>
+                                       <span class="n">file_field</span><span class="o">=</span><span class="s">'image'</span><span class="p">))</span>
+
+<span class="n">urlpatterns</span> <span class="o">+=</span> <span class="p">(</span><span class="s">r'^imageuploader/delete/(?P&lt;pk&gt;\d+)/$'</span><span class="p">,</span>
+                <span class="n">DeleteFileView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">MyModel</span><span class="p">))</span>
+</pre></div>
+
+<h2>Build Status</h2>
+
+<ul>
+<li>master: <a href="https://travis-ci.org/witoi/django-jqueryfileupload"><img src="https://travis-ci.org/witoi/django-jqueryfileupload.png?branch=master" alt="Build Status"></a>
+</li>
+<li>develop: <a href="https://travis-ci.org/witoi/django-jqueryfileupload"><img src="https://travis-ci.org/witoi/django-jqueryfileupload.png?branch=develop" alt="Build Status"></a>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/witoi">witoi</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
